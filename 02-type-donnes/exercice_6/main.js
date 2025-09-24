@@ -1,2 +1,9 @@
 // Exercice 6
-// Écrivez votre code ici
+// // Declare variables with different types of values: number, string, boolean, null, and undefined
+
+let age = 20;
+let nom = "Muks";
+let estConnecte = true;
+let valeurNulle = null;
+let inconnue;
+console.log(age, nom, estConnecte, valeurNulle, inconnue);
