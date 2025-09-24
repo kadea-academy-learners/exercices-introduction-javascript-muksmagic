@@ -5,31 +5,36 @@ let maison = 60000000;
 let terrains = 40000000;
 let liquidites = 20000000;
 
+// Total heritage
 let heritageTotal = 120000000;
 
+// Première catégorie (enfants)
 let partEnfants = heritageTotal * 0.75;
-let nbPartsEnfants = 3;
+let nbPartsEnfants = 3; // Paul, Marie, Alain (represented by Éric & Claire)
 let partParEnfant = partEnfants / nbPartsEnfants;
 
 let paul = partParEnfant;
 let marie = partParEnfant;
 let eric = partParEnfant / 2;
-let claire = partParEnfant / 2;
+let clair = partParEnfant / 2;
 
+// Deuxième catégorie (conjoint + frères)
 let partConjointEtFreres = heritageTotal * 0.25;
-let nbPartsDeuxiemeCat = 3;
+let nbPartsDeuxiemeCat = 3; // Madame MUKUNA, Joseph, Sarah
 
 let madameMukuna = partConjointEtFreres / nbPartsDeuxiemeCat;
 let joseph = partConjointEtFreres / nbPartsDeuxiemeCat;
 let sarah = partConjointEtFreres / nbPartsDeuxiemeCat;
 
+// Display inheritance
 console.log("Répartition de l'héritage :");
-console.log("Paul :", paul.toLocaleString("fr-CD"), "CDF");
-console.log("Marie :", marie.toLocaleString("fr-CD"), "CDF");
-console.log("Éric :", eric.toLocaleString("fr-CD"), "CDF");
-console.log("Claire :", claire.toLocaleString("fr-CD"), "CDF");
-console.log("Madame MUKUNA :", madameMukuna.toLocaleString("fr-CD"), "CDF");
-console.log("Joseph :", joseph.toLocaleString("fr-CD"), "CDF");
-console.log("Sarah :", sarah.toLocaleString("fr-CD"), "CDF");
+console.log("Paul :", paul, "CDF");
+console.log("Marie :", marie, "CDF");
+console.log("Éric :", eric, "CDF");
+console.log("Claire :", clair, "CDF");
+console.log("Madame MUKUNA :", madameMukuna, "CDF");
+console.log("Joseph :", joseph, "CDF");
+console.log("Sarah :", sarah, "CDF");
 
-module.exports = { paul, marie, eric, claire, madameMukuna, joseph, sarah };
+// Export variables for Jest
+module.exports = { paul, marie, eric, clair, madameMukuna, joseph, sarah };
